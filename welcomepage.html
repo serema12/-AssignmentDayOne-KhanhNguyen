@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Assignment 1</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+      <button onclick="prompFunction()">Click me to enter your name</button>
+      <button onclick="confirmFunction()">
+        Click me to say if you like soccer
+      </button>
+    </div>
+    <div>
+      <p id="name"></p>
+      <p id="like"></p>
+    </div>
+    <script>
+      function prompFunction() {
+        const name = prompt("Please enter your name");
+        if (name) {
+          document.getElementById("name").innerHTML = "Hello " + name;
+        }
+      }
+      function confirmFunction() {
+        let soccer;
+        if (confirm("Press let us know you are like soccer or not")) {
+          txt = "User likes soccer";
+        } else {
+          txt = "User does not like soccer !";
+        }
+        if (name) {
+          document.getElementById("like").innerHTML = txt;
+        }
+      }
+    </script>
+  </body>
+</html>
